@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nodus Vitalis – Bewerbung</title>
+</head>
+
+<body>
+  <p>WhatsApp wird geöffnet …</p>
+  <p><a id="whatsappLink" href="#">Falls nichts passiert, hier klicken.</a></p>
+
+  <script>
+    const phone = "4917680532870";
+
+    const message = `Hallo Herr Smolinski,
+ich habe den Code von ___ gescannt. 👋
+
+Ich interessiere mich für einen Job als:
+Pflegefachkraft -
+Helfer (gelernt) -
+Helfer (ungelernt)
+(Bitte Unzutreffendes löschen)
+
+Mein Name:
+Am besten erreichbar bin ich: Vormittags / Nachmittags`;
+
+    const whatsappUrl =
+      "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+    document.getElementById("whatsappLink").href = whatsappUrl;
+    window.location.replace(whatsappUrl);
+  </script>
+</body>
+</html>
